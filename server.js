@@ -1,7 +1,8 @@
 //requrie statements
 const express = require('express');
 const bodyParser = require('body-parser');
-
+//logger 
+const logger = require('./logger/logger.js');
 // create express application
 const app = express();
 
@@ -25,17 +26,18 @@ mongoose.Promise = global.Promise;
 mongoose.connect(dbConfig.url, {
     useNewUrlParser: true
 }).then(() => {
-    console.log("Successfully connected to the database");
+    logger.info("Successfully connected to the database");
 }).catch(err => {
-    console.log("Could not connect to the database.", err);
+    logger.error("Could not connect to the database ")
 });
 
 //simeple route to test the API
 app.get('/', (req, res) => {
     res.json({ "message": "Welcome to Social FootPrint Index API" });
+    logger.info("API GET request sucessful !");
 });
 
 // app listening for requests
 app.listen(3000, () => {
-    console.log("Server is listening on port 3000");
+    logger.info("Server is listening on port 3000");
 });
