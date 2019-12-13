@@ -11,6 +11,22 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // parse requests of content-type - application/json
 app.use(bodyParser.json())
 
+//configuring the database
+const dbConfig = require('./config/database.config.js')
+const mongoose = require('mongoose');
+
+//promise
+mongoose.Promise = global.Promise;
+
+//connecting to the database
+mongoose.connect(dbConfig.url, {
+    useNewUrlParser: true
+}).then(() => {
+    console.log("Successfully connected to the database");
+}).catch(err => {
+    console.log("Could not connect to the database.", err);
+});
+
 //simeple route to test the API
 app.get('/', (req, res) => {
     res.json({ "message": "Welcome to Social FootPrint Index API" });
