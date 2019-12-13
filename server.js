@@ -5,6 +5,9 @@ const bodyParser = require('body-parser');
 // create express application
 const app = express();
 
+//including the routes 
+require('./routes/routes.js')(app);
+
 //parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }))
 
