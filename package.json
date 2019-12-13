@@ -1,0 +1,30 @@
+{
+  "name": "socialfootprintindex",
+  "version": "1.0.0",
+  "description": "Process Json Objects, Save data , allow consume data using a API endpoint ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supunsandeeptha/SocialFootPrintIndex.git"
+  },
+  "keywords": [
+    "Express",
+    "RestAPI",
+    "MongoDB",
+    "Mongoose"
+  ],
+  "author": "supunsandeeptha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/supunsandeeptha/SocialFootPrintIndex/issues"
+  },
+  "homepage": "https://github.com/supunsandeeptha/SocialFootPrintIndex#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.1"
+  }
+}
