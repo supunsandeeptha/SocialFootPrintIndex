@@ -12,6 +12,6 @@ Microservice to read from a Json File and Process the Json File, Store the neces
 7. Create a Database (Any name you like).
 8. Start the NodeJs server using the command (DB='mongodb://localhost:27017/<YOUR - DATABASE - NAME>' node server.js )
 9. Also you can use the docker file for deployment purposes. 
-
+10. Access the API-ENDPOINT using http://localhost:8080/calender/events/confirmedevents
 -----------------------------------------------------------------------------------------------------------
 
